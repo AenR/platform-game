@@ -786,6 +786,7 @@ MonoBehaviour:
   linePosition: {fileID: 1039560906}
   isGrappling: 0
   gm: {fileID: 1497782566}
+  speed: 15
 --- !u!232 &1322573561
 DistanceJoint2D:
   m_ObjectHideFlags: 0

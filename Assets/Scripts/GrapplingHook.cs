@@ -15,6 +15,8 @@ public class GrapplingHook : MonoBehaviour
 
     public GameManager gm;
 
+    public float speed;
+
     void Start()
     {
         isGrappling = true;
@@ -28,7 +30,10 @@ public class GrapplingHook : MonoBehaviour
     {
         mouseDir = mainCamera.ScreenToWorldPoint(Input.mousePosition);
 
-        if(isGrappling)
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        if (isGrappling)
         {
             if(Input.GetMouseButtonDown(0))
             {
@@ -65,6 +70,7 @@ public class GrapplingHook : MonoBehaviour
 
                 _distanceJoint.enabled = true;
             }
+            rb.velocity = new Vector2(moveHorizontal * speed, moveVertical * speed);
         }
     }
 
