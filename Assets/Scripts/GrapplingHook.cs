@@ -25,7 +25,6 @@ public class GrapplingHook : MonoBehaviour
         _lineRenderer.enabled = false;
     }
 
-
     void Update()
     {
         mouseDir = mainCamera.ScreenToWorldPoint(Input.mousePosition);
