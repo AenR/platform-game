@@ -33,7 +33,7 @@ public class GrapplingHook : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        if (isGrappling)
+        if (isGrappling) 
         {
             if(Input.GetMouseButtonDown(0))
             {
@@ -56,19 +56,6 @@ public class GrapplingHook : MonoBehaviour
             if (_distanceJoint.enabled)
             {
                 _lineRenderer.SetPosition(1, transform.position);
-            }
-            if ((Input.GetKey(KeyCode.E)) && Input.GetMouseButton(0))
-            {
-                Vector3 Direction = linePosition.position - transform.position;
-
-                rb.velocity = new Vector2(Direction.x * force, Direction.y * force).normalized * force * Time.deltaTime;
-                _distanceJoint.enabled = false;
-            }
-            if ((Input.GetKeyUp(KeyCode.E)) && Input.GetMouseButton(0))
-            {
-                Vector3 Direction = linePosition.position - transform.position;
-
-                _distanceJoint.enabled = true;
             }
             rb.velocity = new Vector2(moveHorizontal * speed, moveVertical * speed);
         }
