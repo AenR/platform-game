@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI para;
     public TextMeshProUGUI durum;
 
+    public int key;
+
     void Start()
     {
         coin = PlayerPrefs.GetInt("coin");

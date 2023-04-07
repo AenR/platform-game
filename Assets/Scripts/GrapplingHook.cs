@@ -35,12 +35,8 @@ public class GrapplingHook : MonoBehaviour
                 Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
                 _lineRenderer.SetPosition(0, mousePos);
                 _distanceJoint.connectedAnchor = mousePos;
-                _distanceJoint.enabled = false;
+                _distanceJoint.enabled = true;
                 linePosition.position = mousePos;
-
-                Vector3 Direction = linePosition.position - transform.position;
-
-                rb.velocity = new Vector2(Direction.x * force, Direction.y * force).normalized * force * Time.deltaTime;
             }
             if (Input.GetMouseButton(0))
             {
@@ -56,6 +52,19 @@ public class GrapplingHook : MonoBehaviour
             {
                 _lineRenderer.SetPosition(1, transform.position);
             }
+            if ((Input.GetKey(KeyCode.E)) && Input.GetMouseButton(0))
+            {
+                Vector3 Direction = linePosition.position - transform.position;
+
+                rb.velocity = new Vector2(Direction.x * force, Direction.y * force).normalized * force * Time.deltaTime;
+                _distanceJoint.enabled = false;
+            }
+            if ((Input.GetKeyUp(KeyCode.E)) && Input.GetMouseButton(0))
+            {
+                Vector3 Direction = linePosition.position - transform.position;
+
+                _distanceJoint.enabled = true;
+            }
         }
     }
 
@@ -69,15 +78,28 @@ public class GrapplingHook : MonoBehaviour
 
         if (collision.gameObject.tag == "door")
         {
-            Debug.Log("sonraki bolume gecildi.");
             gm.durum.text = ("Sonraki bolume gecildi.");
         }
 
         if (collision.gameObject.tag == "acid")
         {
             Time.timeScale = 0;
-            Debug.Log("oldun.");
             gm.durum.text = ("Oldunuz.");
+        }
+
+        if (collision.gameObject.tag == "key")
+        {
+            gm.key++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "keydoor")
+        {
+            if(gm.key>0)
+            {
+                gm.key--;
+                gm.durum.text = ("Kapi acildi.");
+            }
         }
     }
 }
