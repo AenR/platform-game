@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 1726336394}
   - component: {fileID: 1726336395}
   m_Layer: 0
-  m_Name: HeroKnight
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1769,8 +1769,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0102efd97244d5a45b6f94ddbf194bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 1946430559}
   attackPoint: {fileID: 1286499043}
-  attackRange: 5
+  attackRange: 2
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
@@ -2221,6 +2222,8 @@ MonoBehaviour:
   speed: 2
   chase: 0
   startingPoint: {fileID: 322419641}
+  maxHealth: 3
+  currentHealth: 0
 --- !u!60 &1946430561
 PolygonCollider2D:
   m_ObjectHideFlags: 0

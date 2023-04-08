@@ -9,8 +9,12 @@ public class FlyingEnemy : MonoBehaviour
     public Transform startingPoint;
     private GameObject player;
 
+    public int maxHealth = 3;
+    public int currentHealth;
+
     void Start()
     {
+        currentHealth = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -30,7 +34,10 @@ public class FlyingEnemy : MonoBehaviour
             ReturnStartPoint();
         }
         Flip();
-
+        if(currentHealth<=0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Chase()

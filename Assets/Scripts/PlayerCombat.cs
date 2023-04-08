@@ -4,14 +4,29 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    FlyingEnemy flyingEnemy;
+    [SerializeField] GameObject monster;
+
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    
+
+    private void Awake()
+    {
+        flyingEnemy = monster.GetComponent<FlyingEnemy>();
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            attackPoint.transform.position = transform.position + new Vector3(-1, 1, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            attackPoint.transform.position = transform.position + new Vector3(1, 1, 0);
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
@@ -24,7 +39,7 @@ public class PlayerCombat : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log("we hit" + enemy.name);
+            flyingEnemy.currentHealth -= 1;
         }
     }
     private void OnDrawGizmosSelected()
