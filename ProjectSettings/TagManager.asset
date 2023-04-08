@@ -9,6 +9,7 @@ TagManager:
   - acid
   - key
   - keydoor
+  - enemy
   layers:
   - Default
   - TransparentFX
