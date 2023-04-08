@@ -11,6 +11,9 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
+    public float fireRate = 0.5f;
+    private float nextFire = 0.0f;
+
     private void Awake()
     {
         flyingEnemy = monster.GetComponent<FlyingEnemy>();
@@ -27,8 +30,9 @@ public class PlayerCombat : MonoBehaviour
         {
             attackPoint.transform.position = transform.position + new Vector3(1, 1, 0);
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.time > nextFire)
         {
+            nextFire = Time.time + fireRate;
             Attack();
         }
     }

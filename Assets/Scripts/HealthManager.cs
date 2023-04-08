@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour
 {
     public int health = 3;
+    public GameObject playermanager;
 
     public Image[] hearts;
     public Sprite fullHeart;

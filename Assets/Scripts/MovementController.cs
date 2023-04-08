@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Threading;
 
 public class MovementController : MonoBehaviour
 {
@@ -8,16 +9,11 @@ public class MovementController : MonoBehaviour
     [SerializeField] float m_jumpForce = 7.5f;
     [SerializeField] float m_rollForce = 6.0f;
     [SerializeField] bool m_noBlood = false;
-    [SerializeField] GameObject m_slideDust;
 
     public GameManager gm;
     private Animator m_animator;
     private Rigidbody2D m_body2d;
     private Sensor_HeroKnight m_groundSensor;
-    private Sensor_HeroKnight m_wallSensorR1;
-    private Sensor_HeroKnight m_wallSensorR2;
-    private Sensor_HeroKnight m_wallSensorL1;
-    private Sensor_HeroKnight m_wallSensorL2;
     private bool m_isWallSliding = false;
     private bool m_grounded = false;
     private bool m_rolling = false;
@@ -28,6 +24,17 @@ public class MovementController : MonoBehaviour
     private float m_rollDuration = 8.0f / 14.0f;
     private float m_rollCurrentTime;
 
+    HealthManager healthManager;
+    public GameObject PlayerManagerr;
+
+    public float damageRate = 2.0f;
+    private float nextDamage = 0.0f;
+
+    private void Awake()
+    {
+        healthManager = PlayerManagerr.GetComponent<HealthManager>();
+    }
+
 
     // Use this for initialization
     void Start()
@@ -35,15 +42,18 @@ public class MovementController : MonoBehaviour
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
-        m_wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<Sensor_HeroKnight>();
-        m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
-        m_wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
-        m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (healthManager.health <= 0)
+        {
+            Time.timeScale = 0;
+            gm.durum.text = ("Oldunuz.");
+        }
+
         // Increase timer that controls attack combo
         m_timeSinceAttack += Time.deltaTime;
 
@@ -93,9 +103,6 @@ public class MovementController : MonoBehaviour
         m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
 
         // -- Handle Animations --
-        //Wall Slide
-        m_isWallSliding = (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State());
-        m_animator.SetBool("WallSlide", m_isWallSliding);
 
         //Attack
         if (Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f && !m_rolling)
@@ -116,25 +123,6 @@ public class MovementController : MonoBehaviour
             // Reset timer
             m_timeSinceAttack = 0.0f;
         }
-
-        // Block
-        else if (Input.GetMouseButtonDown(1) && !m_rolling)
-        {
-            m_animator.SetTrigger("Block");
-            m_animator.SetBool("IdleBlock", true);
-        }
-
-        else if (Input.GetMouseButtonUp(1))
-            m_animator.SetBool("IdleBlock", false);
-
-        // Roll
-        else if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
-        {
-            m_rolling = true;
-            m_animator.SetTrigger("Roll");
-            m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
-        }
-
 
         //Jump
         else if (Input.GetKeyDown("space") && m_grounded && !m_rolling)
@@ -165,24 +153,6 @@ public class MovementController : MonoBehaviour
     }
 
     // Animation Events
-    // Called in slide animation.
-    void AE_SlideDust()
-    {
-        Vector3 spawnPosition;
-
-        if (m_facingDirection == 1)
-            spawnPosition = m_wallSensorR2.transform.position;
-        else
-            spawnPosition = m_wallSensorL2.transform.position;
-
-        if (m_slideDust != null)
-        {
-            // Set correct arrow spawn position
-            GameObject dust = Instantiate(m_slideDust, spawnPosition, gameObject.transform.localRotation) as GameObject;
-            // Turn arrow in correct direction
-            dust.transform.localScale = new Vector3(m_facingDirection, 1, 1);
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -201,6 +171,7 @@ public class MovementController : MonoBehaviour
         {
             Time.timeScale = 0;
             gm.durum.text = ("Oldunuz.");
+            healthManager.health = 0;
         }
 
         if (collision.gameObject.tag == "key")
@@ -215,6 +186,24 @@ public class MovementController : MonoBehaviour
             {
                 gm.key--;
                 gm.durum.text = ("Kapi acildi.");
+            }
+        }
+
+        if (collision.gameObject.tag == "enemy")
+        {
+            if (Time.time > nextDamage)
+            {
+                nextDamage = Time.time + damageRate;
+                healthManager.health -= 1;
+            }
+        }
+
+        if (collision.gameObject.tag == "heart")
+        {
+            if (healthManager.health < 3)
+            {
+                healthManager.health += 1;
+                Destroy(collision.gameObject);
             }
         }
     }
