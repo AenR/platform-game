@@ -11,7 +11,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
-    public float fireRate = 0.5f;
+    public float fireRate = 0.1f;
     private float nextFire = 0.0f;
 
     private void Awake()
