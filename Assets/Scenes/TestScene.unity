@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applicationID: 0
   details: Playing Platformer game
-  state: 'Current level: {level}'
+  state: 'Current level: '
   largeImage: large
   largeText: Platformer Game
 --- !u!4 &97913938

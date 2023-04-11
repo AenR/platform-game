@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Discord;
+using UnityEngine.SceneManagement;
 
 public class DiscordController : MonoBehaviour
 {
+    string sceneName { get { return SceneManager.GetActiveScene().name; } }
+
     public long applicationID;
     [Space]
     public string details = "Playing Platformer Game";
@@ -69,7 +72,7 @@ public class DiscordController : MonoBehaviour
             var activity = new Discord.Activity
             {
                 Details = details,
-                State = state,
+                State = state+sceneName,
                 Assets =
                 {
                     LargeImage = largeImage,
