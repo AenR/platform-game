@@ -6,17 +6,22 @@ using Unity.VisualScripting;
 public class MovementController : MonoBehaviour
 {
 
-    [SerializeField] float m_speed = 4.0f;
-    [SerializeField] float m_jumpForce = 7.5f;
-    [SerializeField] float m_rollForce = 6.0f;
-    [SerializeField] bool m_noBlood = false;
-
     public GameManager gm;
     HealthManager healthManager;
     public GameObject PlayerManagerr;
 
     public float damageRate = 2.0f;
     private float nextDamage = 0.0f;
+
+    //Movement
+    private float horizontal;
+    public float speed = 8f;
+    public float jumpingPower = 16f;
+    private bool isFacingRight = true;
+
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
 
     private void Awake()
     {
@@ -32,11 +37,46 @@ public class MovementController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        
+    {
+        horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        Flip();
     }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.tag == "coin")
         {
             gm.coin += 1;
