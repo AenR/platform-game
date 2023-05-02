@@ -85,7 +85,7 @@ public class MovementController : MonoBehaviour
 
         if (collision.gameObject.tag == "door")
         {
-            gm.durum.text = ("Sonraki bolume gecildi.");
+            Time.timeScale = 0;
         }
 
         if (collision.gameObject.tag == "acid")

@@ -28,5 +28,10 @@ public class HealthManager : MonoBehaviour
         {
             hearts[i].sprite = fullHeart;
         }
+
+        if (health == 0) 
+        {
+            Time.timeScale = 0;
+        }
     }
 }

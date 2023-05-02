@@ -24,11 +24,11 @@ public class PlayerCombat : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
-            attackPoint.transform.position = transform.position + new Vector3(-1, 1, 0);
+            attackPoint.transform.position = transform.position - new Vector3(-1, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            attackPoint.transform.position = transform.position + new Vector3(1, 1, 0);
+            attackPoint.transform.position = transform.position - new Vector3(1, 0, 0);
         }
         if (Input.GetMouseButtonDown(0) && Time.time > nextFire)
         {
