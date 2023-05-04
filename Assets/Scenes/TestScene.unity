@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applicationID: 1010227450258665542
   details: Playing TofTof
-  state: 'Current level: '
+  state: 'Currently in: '
   largeImage: large
   largeText: TofTof Game
 --- !u!4 &97913938
@@ -639,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 913120687}
+  cam: {fileID: 519420031}
 --- !u!1 &597062675
 GameObject:
   m_ObjectHideFlags: 0
