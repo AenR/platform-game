@@ -13,6 +13,8 @@ public class HealthManager : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public GameObject deathMenu;
+
     void Awake()
     {
         health = 3;
@@ -31,6 +33,7 @@ public class HealthManager : MonoBehaviour
 
         if (health == 0) 
         {
+            deathMenu.SetActive(true);
             Time.timeScale = 0;
         }
     }
