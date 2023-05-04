@@ -54,17 +54,29 @@ public class MovementController : MonoBehaviour
 
         Flip();
 
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pauseMenu.SetActive(true);
-            Time.timeScale = 0;
+            if (pauseMenu.activeSelf)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
         }
     }
 
-    public void ResumeGame()
+    void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f; // Oyun zamanýný durdurur
+    }
+
+    void Resume()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+        Time.timeScale = 1f; // Oyun zamanýný geri baþlatýr
     }
 
     private void FixedUpdate()
