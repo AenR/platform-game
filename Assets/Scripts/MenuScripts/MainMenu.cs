@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
+    public int lastLevel = 4;
     public void Exit()
     {
         Application.Quit();
@@ -18,12 +18,20 @@ public class MainMenu : MonoBehaviour
 
     public void Settings()
     {
+        SceneManager.LoadScene(2);
+    }
 
+    public void Shop()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void Play()
     {
-
+        if (lastLevel < 4)
+        {
+            lastLevel++;
+        }
     }
 
 }
