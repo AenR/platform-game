@@ -19,6 +19,8 @@ public class MovementController : MonoBehaviour
     public float jumpingPower = 16f;
     private bool isFacingRight = true;
 
+    public GameObject pauseMenu;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -51,6 +53,18 @@ public class MovementController : MonoBehaviour
         }
 
         Flip();
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     private void FixedUpdate()
