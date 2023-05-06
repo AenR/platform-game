@@ -158,7 +158,6 @@ public class MovementController : MonoBehaviour
         if(collision.gameObject.tag == "levelupdater")
         {
             PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
-            Debug.Log(PlayerPrefs.GetInt("SavedScene"));
         }
     }
 }
