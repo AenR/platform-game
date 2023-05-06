@@ -11,6 +11,7 @@ TagManager:
   - keydoor
   - enemy
   - heart
+  - levelupdater
   layers:
   - Default
   - TransparentFX

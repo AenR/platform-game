@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Threading;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class MovementController : MonoBehaviour
 {
@@ -111,7 +112,7 @@ public class MovementController : MonoBehaviour
 
         if (collision.gameObject.tag == "door")
         {
-            Time.timeScale = 0;
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex) + 1);
         }
 
         if (collision.gameObject.tag == "acid")
@@ -152,6 +153,12 @@ public class MovementController : MonoBehaviour
                 healthManager.health += 1;
                 Destroy(collision.gameObject);
             }
+        }
+
+        if(collision.gameObject.tag == "levelupdater")
+        {
+            PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+            Debug.Log(PlayerPrefs.GetInt("SavedScene"));
         }
     }
 }
