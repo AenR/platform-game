@@ -4,7 +4,7 @@ using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
-public class MovementController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
     public GameManager gm;
@@ -155,7 +155,7 @@ public class MovementController : MonoBehaviour
             }
         }
 
-        if(collision.gameObject.tag == "levelupdater")
+        if (collision.gameObject.tag == "levelupdater")
         {
             PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
         }

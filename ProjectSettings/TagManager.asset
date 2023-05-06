@@ -12,6 +12,7 @@ TagManager:
   - enemy
   - heart
   - levelupdater
+  - barrel
   layers:
   - Default
   - TransparentFX

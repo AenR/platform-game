@@ -1125,15 +1125,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1497782566}
+  healthManager: {fileID: 0}
   PlayerManagerr: {fileID: 430549861}
   damageRate: 0.5
+  nextDamage: 0
+  horizontal: 0
   speed: 8
   jumpingPower: 8
+  isFacingRight: 1
   pauseMenu: {fileID: 1849988045}
   rb: {fileID: 913120688}
   groundCheck: {fileID: 1961023342}
   groundLayer:
-    serializedVersion: 2
     m_Bits: 256
 --- !u!212 &913120692
 SpriteRenderer:
