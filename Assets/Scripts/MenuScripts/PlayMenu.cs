@@ -14,12 +14,12 @@ public class PlayMenu : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene("Tutorial");
-        //player pref sifirlanacak
+        PlayerPrefs.SetInt("SavedScene", 0);
     }
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene")); //son oynanan kayitli scene'i loadliyor
+        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
     }
 
 }
