@@ -27,15 +27,4 @@ public class ChaseControl : MonoBehaviour
             }
         }
     }
-
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
 }
