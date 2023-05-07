@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ShopMenu : MonoBehaviour
 {
@@ -15,5 +17,10 @@ public class ShopMenu : MonoBehaviour
         coin = coin - 20;
         PlayerPrefs.SetInt("coin", coin);
         PlayerPrefs.SetInt("HasNose", 1);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu ");
     }
 }
