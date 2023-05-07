@@ -15,6 +15,7 @@ public class PlayMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
         PlayerPrefs.SetInt("SavedScene", 0);
+        PlayerPrefs.SetInt("coin", 0);
     }
 
     public void LoadGame()

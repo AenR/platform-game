@@ -11,7 +11,6 @@ TagManager:
   - keydoor
   - enemy
   - heart
-  - levelupdater
   - barrel
   layers:
   - Default

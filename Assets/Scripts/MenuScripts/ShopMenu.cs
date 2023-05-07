@@ -15,6 +15,5 @@ public class ShopMenu : MonoBehaviour
         coin = coin - 20;
         PlayerPrefs.SetInt("coin", coin);
         PlayerPrefs.SetInt("HasNose", 1);
-        Debug.Log(PlayerPrefs.GetInt("HasNose"));
     }
 }

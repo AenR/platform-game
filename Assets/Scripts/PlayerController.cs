@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    int savedScene;
+
     private void Awake()
     {
         healthManager = PlayerManagerr.GetComponent<HealthManager>();
@@ -112,6 +114,8 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.tag == "door")
         {
+            savedScene = (SceneManager.GetActiveScene().buildIndex) + 1;
+            PlayerPrefs.SetInt("SavedScene", savedScene);
             SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex) + 1);
         }
 
@@ -153,11 +157,6 @@ public class PlayerController : MonoBehaviour
                 healthManager.health += 1;
                 Destroy(collision.gameObject);
             }
-        }
-
-        if (collision.gameObject.tag == "levelupdater")
-        {
-            PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
