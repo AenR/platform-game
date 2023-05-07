@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayMenu : MonoBehaviour
 {
+    int lastScene;
 
     public void Back()
     {
@@ -20,7 +21,8 @@ public class PlayMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
+        lastScene = PlayerPrefs.GetInt("SavedScene");
+        SceneManager.LoadScene(lastScene);
     }
 
 }
