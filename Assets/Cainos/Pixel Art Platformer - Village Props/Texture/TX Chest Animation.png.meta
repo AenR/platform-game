@@ -3,91 +3,91 @@ guid: 19e07f9d107e445408633f50457d456e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1309413244939661745
+      213: 21300000
     second: TX Chest Animation Wooden 0
   - first:
-      213: 2628861295414256057
+      213: 21300002
     second: TX Chest Animation Wooden 1
   - first:
-      213: 7729124679938002231
+      213: 21300004
     second: TX Chest Animation Wooden 2
   - first:
-      213: 6231711225017064468
+      213: 21300006
     second: TX Chest Animation Wooden 3
   - first:
-      213: 2032627284715886908
+      213: 21300008
     second: TX Chest Animation Wooden 4
   - first:
-      213: 3186618823931839756
+      213: 21300010
     second: TX Chest Animation Wooden 5
   - first:
-      213: -1440598482483040155
+      213: 21300012
     second: TX Chest Animation Wooden 6
   - first:
-      213: 5233871863560122000
+      213: 21300014
     second: TX Chest Animation Iron 0
   - first:
-      213: 3278100515923679428
+      213: 21300016
     second: TX Chest Animation Iron 1
   - first:
-      213: 8206291628881865982
+      213: 21300018
     second: TX Chest Animation Iron 2
   - first:
-      213: -7401870491986572264
+      213: 21300020
     second: TX Chest Animation Iron 3
   - first:
-      213: -7148347082035780633
+      213: 21300022
     second: TX Chest Animation Iron 4
   - first:
-      213: -6398334591226318208
+      213: 21300024
     second: TX Chest Animation Iron 5
   - first:
-      213: 6756677616160534888
+      213: 21300026
     second: TX Chest Animation Iron 6
   - first:
-      213: 3849778927949640068
+      213: 21300028
     second: TX Chest Animation Silver 0
   - first:
-      213: 8901239322130806984
+      213: 21300030
     second: TX Chest Animation Silver 1
   - first:
-      213: 1052626010940248532
+      213: 21300032
     second: TX Chest Animation Silver 2
   - first:
-      213: 3119438749017079868
+      213: 21300034
     second: TX Chest Animation Silver 3
   - first:
-      213: 4918926099135234322
+      213: 21300036
     second: TX Chest Animation Silver 4
   - first:
-      213: -881816029012212927
+      213: 21300038
     second: TX Chest Animation Silver 5
   - first:
-      213: 5501649885831989918
+      213: 21300040
     second: TX Chest Animation Silver 6
   - first:
-      213: -6929924221510541977
+      213: 21300042
     second: TX Chest Animation Golden 0
   - first:
-      213: -8385124645873774784
+      213: 21300044
     second: TX Chest Animation Golden 1
   - first:
-      213: -2859092616773691244
+      213: 21300046
     second: TX Chest Animation Golden 2
   - first:
-      213: 2094815519824226833
+      213: 21300048
     second: TX Chest Animation Golden 3
   - first:
-      213: -2983415483628201805
+      213: 21300050
     second: TX Chest Animation Golden 4
   - first:
-      213: 1880024034202856855
+      213: 21300052
     second: TX Chest Animation Golden 5
   - first:
-      213: -3888567672798316567
+      213: 21300054
     second: TX Chest Animation Golden 6
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -146,7 +146,8 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -159,7 +160,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -171,7 +172,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -183,7 +184,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -195,7 +196,19 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -215,7 +228,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f4e0e2f579704dde0800000000000000
-      internalID: -1309413244939661745
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -236,7 +249,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9b1a0fc7b679b7420800000000000000
-      internalID: 2628861295414256057
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -257,7 +270,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 73dc86c12fd534b60800000000000000
-      internalID: 7729124679938002231
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -278,7 +291,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 41cd4f5975c7b7650800000000000000
-      internalID: 6231711225017064468
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -299,7 +312,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c39d1420fb7553c10800000000000000
-      internalID: 2032627284715886908
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -320,7 +333,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c05c70bdfe4293c20800000000000000
-      internalID: 3186618823931839756
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -341,7 +354,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 560b1a31057f10ce0800000000000000
-      internalID: -1440598482483040155
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -362,7 +375,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 09ea96bcab272a840800000000000000
-      internalID: 5233871863560122000
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -383,7 +396,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4c8d7a51d072e7d20800000000000000
-      internalID: 3278100515923679428
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -404,7 +417,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: efce3c6f1ca92e170800000000000000
-      internalID: 8206291628881865982
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
@@ -425,7 +438,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 81cc1bb1106474990800000000000000
-      internalID: -7401870491986572264
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
@@ -446,7 +459,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 7e3ae04d338fbcc90800000000000000
-      internalID: -7148347082035780633
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
@@ -467,7 +480,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 0827cdfc69c8437a0800000000000000
-      internalID: -6398334591226318208
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
@@ -488,7 +501,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 861f4155e7a84cd50800000000000000
-      internalID: 6756677616160534888
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
@@ -509,7 +522,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 481f838b9892d6530800000000000000
-      internalID: 3849778927949640068
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
@@ -530,7 +543,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8c87850b00e878b70800000000000000
-      internalID: 8901239322130806984
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
@@ -551,7 +564,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4d11e67a7cdab9e00800000000000000
-      internalID: 1052626010940248532
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
@@ -572,7 +585,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c3080c5c3097a4b20800000000000000
-      internalID: 3119438749017079868
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
@@ -593,7 +606,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2118a5fb939834440800000000000000
-      internalID: 4918926099135234322
+      internalID: 21300036
       vertices: []
       indices: 
       edges: []
@@ -614,7 +627,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1434b716ef823c3f0800000000000000
-      internalID: -881816029012212927
+      internalID: 21300038
       vertices: []
       indices: 
       edges: []
@@ -635,7 +648,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e9a85931c69c95c40800000000000000
-      internalID: 5501649885831989918
+      internalID: 21300040
       vertices: []
       indices: 
       edges: []
@@ -656,7 +669,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 76d1d7803a6f3df90800000000000000
-      internalID: -6929924221510541977
+      internalID: 21300042
       vertices: []
       indices: 
       edges: []
@@ -677,7 +690,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 04f02559f8d02ab80800000000000000
-      internalID: -8385124645873774784
+      internalID: 21300044
       vertices: []
       indices: 
       edges: []
@@ -698,7 +711,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4981345c9667258d0800000000000000
-      internalID: -2859092616773691244
+      internalID: 21300046
       vertices: []
       indices: 
       edges: []
@@ -719,7 +732,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 11a2911dd97421d10800000000000000
-      internalID: 2094815519824226833
+      internalID: 21300048
       vertices: []
       indices: 
       edges: []
@@ -740,7 +753,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3b8d0f8ac67c896d0800000000000000
-      internalID: -2983415483628201805
+      internalID: 21300050
       vertices: []
       indices: 
       edges: []
@@ -761,7 +774,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 79dabd7f5ef271a10800000000000000
-      internalID: 1880024034202856855
+      internalID: 21300052
       vertices: []
       indices: 
       edges: []
@@ -782,7 +795,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9e7f9c9dd48090ac0800000000000000
-      internalID: -3888567672798316567
+      internalID: 21300054
       vertices: []
       indices: 
       edges: []
@@ -798,34 +811,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TX Chest Animation Silver 1: 8901239322130806984
-      TX Chest Animation Iron 0: 5233871863560122000
-      TX Chest Animation Silver 6: 5501649885831989918
-      TX Chest Animation Iron 4: -7148347082035780633
-      TX Chest Animation Golden 2: -2859092616773691244
-      TX Chest Animation Silver 3: 3119438749017079868
-      TX Chest Animation Iron 5: -6398334591226318208
-      TX Chest Animation Golden 0: -6929924221510541977
-      TX Chest Animation Golden 3: 2094815519824226833
-      TX Chest Animation Iron 2: 8206291628881865982
-      TX Chest Animation Iron 6: 6756677616160534888
-      TX Chest Animation Wooden 5: 3186618823931839756
-      TX Chest Animation Wooden 2: 7729124679938002231
-      TX Chest Animation Wooden 4: 2032627284715886908
-      TX Chest Animation Golden 4: -2983415483628201805
-      TX Chest Animation Silver 4: 4918926099135234322
-      TX Chest Animation Iron 1: 3278100515923679428
-      TX Chest Animation Silver 2: 1052626010940248532
-      TX Chest Animation Wooden 3: 6231711225017064468
-      TX Chest Animation Wooden 1: 2628861295414256057
-      TX Chest Animation Golden 1: -8385124645873774784
-      TX Chest Animation Wooden 6: -1440598482483040155
-      TX Chest Animation Iron 3: -7401870491986572264
-      TX Chest Animation Silver 5: -881816029012212927
-      TX Chest Animation Golden 5: 1880024034202856855
-      TX Chest Animation Silver 0: 3849778927949640068
-      TX Chest Animation Wooden 0: -1309413244939661745
-      TX Chest Animation Golden 6: -3888567672798316567
+      TX Chest Animation Golden 0: 21300042
+      TX Chest Animation Golden 1: 21300044
+      TX Chest Animation Golden 2: 21300046
+      TX Chest Animation Golden 3: 21300048
+      TX Chest Animation Golden 4: 21300050
+      TX Chest Animation Golden 5: 21300052
+      TX Chest Animation Golden 6: 21300054
+      TX Chest Animation Iron 0: 21300014
+      TX Chest Animation Iron 1: 21300016
+      TX Chest Animation Iron 2: 21300018
+      TX Chest Animation Iron 3: 21300020
+      TX Chest Animation Iron 4: 21300022
+      TX Chest Animation Iron 5: 21300024
+      TX Chest Animation Iron 6: 21300026
+      TX Chest Animation Silver 0: 21300028
+      TX Chest Animation Silver 1: 21300030
+      TX Chest Animation Silver 2: 21300032
+      TX Chest Animation Silver 3: 21300034
+      TX Chest Animation Silver 4: 21300036
+      TX Chest Animation Silver 5: 21300038
+      TX Chest Animation Silver 6: 21300040
+      TX Chest Animation Wooden 0: 21300000
+      TX Chest Animation Wooden 1: 21300002
+      TX Chest Animation Wooden 2: 21300004
+      TX Chest Animation Wooden 3: 21300006
+      TX Chest Animation Wooden 4: 21300008
+      TX Chest Animation Wooden 5: 21300010
+      TX Chest Animation Wooden 6: 21300012
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
