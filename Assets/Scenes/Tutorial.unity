@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 398025386}
   - component: {fileID: 398025388}
   - component: {fileID: 398025387}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Mini Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,6 +1132,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!4 &654372421 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 8028528364102059199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &730895214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1150,7 @@ GameObject:
   - component: {fileID: 730895217}
   - component: {fileID: 730895216}
   - component: {fileID: 730895215}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1254,7 +1260,7 @@ GameObject:
   - component: {fileID: 813065718}
   - component: {fileID: 813065720}
   - component: {fileID: 813065719}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Heart (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1350,6 +1356,7 @@ Transform:
   - {fileID: 2006383593}
   - {fileID: 1679765040}
   - {fileID: 1124087332}
+  - {fileID: 654372421}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2020,7 +2027,7 @@ GameObject:
   - component: {fileID: 1367340782}
   - component: {fileID: 1367340784}
   - component: {fileID: 1367340783}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2369,7 +2376,7 @@ GameObject:
   - component: {fileID: 1410594586}
   - component: {fileID: 1410594588}
   - component: {fileID: 1410594587}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7593,7 +7600,7 @@ GameObject:
   - component: {fileID: 1792568437}
   - component: {fileID: 1792568439}
   - component: {fileID: 1792568438}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Heart (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7669,7 +7676,7 @@ GameObject:
   - component: {fileID: 1809859612}
   - component: {fileID: 1809859614}
   - component: {fileID: 1809859613}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MiniMapBg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7959,7 +7966,7 @@ GameObject:
   - component: {fileID: 2028834377}
   - component: {fileID: 2028834379}
   - component: {fileID: 2028834378}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8099,7 +8106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2067203351}
   - component: {fileID: 2067203352}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HeartContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8569,3 +8576,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c89dcd7fdf7233e4cacdfe5938290e2a, type: 3}
+--- !u!1001 &8028528364102059199
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 827435371}
+    m_Modifications:
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.052526
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.019183874
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1125479
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700730, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028528364655700735, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe,
+        type: 3}
+      propertyPath: m_Name
+      value: ZiplayanDusman
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e009f7e7644b0c4bb5c26d66d8b7fbe, type: 3}
