@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    FlyingEnemy flyingEnemy;
-    [SerializeField] GameObject monster;
+    
 
     public Transform attackPoint;
     public float attackRange = 0.5f;
@@ -14,10 +13,7 @@ public class PlayerCombat : MonoBehaviour
     public float fireRate = 0.1f;
     private float nextFire = 0.0f;
 
-    private void Awake()
-    {
-        flyingEnemy = monster.GetComponent<FlyingEnemy>();
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -35,17 +31,23 @@ public class PlayerCombat : MonoBehaviour
             nextFire = Time.time + fireRate;
             Attack();
         }
+
     }
 
     void Attack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+        foreach (Collider2D enemy in hitEnemies)
         {
-            flyingEnemy.currentHealth -= 1;
+            EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(1); // Her düþmana hasar ver
+            }
         }
     }
+    
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
