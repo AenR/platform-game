@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 50221139365942876}
   - component: {fileID: 61238715721545218}
   - component: {fileID: 114988547420012336}
+  - component: {fileID: 9123979692422219829}
   m_Layer: 0
   m_Name: Destructible
   m_TagString: Untagged
@@ -182,6 +183,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints:
   - {fileID: 114246260709459516}
+--- !u!114 &9123979692422219829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464299433022776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd858e12b6ddd434bb4fbcfc92fd9f6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDelay: 2
 --- !u!1 &1494306265398546
 GameObject:
   m_ObjectHideFlags: 0
