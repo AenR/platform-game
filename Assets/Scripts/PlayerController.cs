@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-
+    
     public GameManager gm;
-    HealthManager healthManager;
+
     public GameObject PlayerManagerr;
 
     public float damageRate = 2.0f;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        healthManager = PlayerManagerr.GetComponent<HealthManager>();
+        
     }
 
 
@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
         {
             Time.timeScale = 0;
             gm.durum.text = ("Oldunuz.");
-            healthManager.health = 0;
+        
         }
 
         if (collision.gameObject.tag == "key")
@@ -146,17 +146,10 @@ public class PlayerController : MonoBehaviour
             if (Time.time > nextDamage)
             {
                 nextDamage = Time.time + damageRate;
-                healthManager.health -= 1;
+                
             }
         }
 
-        if (collision.gameObject.tag == "heart")
-        {
-            if (healthManager.health < 3)
-            {
-                healthManager.health += 1;
-                Destroy(collision.gameObject);
-            }
-        }
+       
     }
 }
