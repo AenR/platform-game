@@ -260,8 +260,6 @@ MonoBehaviour:
   speed: 2
   chase: 0
   startingPoint: {fileID: 1756699455586714724}
-  maxHealth: 3
-  currentHealth: 0
 --- !u!114 &2515744528744113057
 MonoBehaviour:
   m_ObjectHideFlags: 0
