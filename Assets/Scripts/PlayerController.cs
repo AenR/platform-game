@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     
     public GameManager gm;
 
-    public GameObject PlayerManagerr;
+    HealthManager healthManager;
 
     public float damageRate = 2.0f;
     private float nextDamage = 0.0f;
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        healthManager = FindObjectOfType<HealthManager>();
     }
 
     // Update is called once per frame
@@ -146,8 +146,14 @@ public class PlayerController : MonoBehaviour
             if (Time.time > nextDamage)
             {
                 nextDamage = Time.time + damageRate;
-                
+                healthManager.TakeDamage(25); //25 can eksilt
             }
+        }
+
+        if (collision.gameObject.tag == "heart" && healthManager.healthAmount<100) //kalbin ustune geldiginde can 100den kucukse
+        {
+            healthManager.Heal(25); //25 can ver
+            Destroy(collision.gameObject); //kalbi yok et
         }
 
        
