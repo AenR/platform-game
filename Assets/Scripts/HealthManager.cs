@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthManager : MonoBehaviour
 {
+    public TextMeshProUGUI healthText;
     public Image healthBar;
     public float healthAmount = 100f;
 
@@ -15,6 +17,7 @@ public class HealthManager : MonoBehaviour
         {
             //character dead
         }
+        healthText.text = healthAmount.ToString();
     }
 
     public void TakeDamage(float damage) //take damage function
