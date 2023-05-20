@@ -8098,7 +8098,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1350625}
-  PlayerManagerr: {fileID: 0}
   damageRate: 0.5
   speed: 8
   jumpingPower: 12
