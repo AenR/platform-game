@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "heart" && healthManager.healthAmount<75) //kalbin ustune geldiginde can 100den kucukse
+        if (collision.gameObject.tag == "heart" && healthManager.healthAmount<=75) //kalbin ustune geldiginde can 100den kucukse
         {
             healthManager.Heal(25); //25 can ver
             Destroy(collision.gameObject); //kalbi yok et
