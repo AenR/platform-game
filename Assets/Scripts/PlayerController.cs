@@ -121,9 +121,10 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.tag == "acid")
         {
+            healthManager.SetHealth(0f);
             Time.timeScale = 0;
             gm.durum.text = ("Oldunuz.");
-        
+
         }
 
         if (collision.gameObject.tag == "key")

@@ -32,4 +32,10 @@ public class HealthManager : MonoBehaviour
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
         healthBar.fillAmount = healthAmount / 100f;
     }
+
+    public void SetHealth(float health)
+    {
+        healthAmount = health;
+        healthBar.fillAmount = healthAmount / 100f;
+    }
 }
