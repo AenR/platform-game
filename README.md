@@ -6,4 +6,3 @@
 <p align="center">
   Platform Game
 </p>
-<p align="left">Made for final project</p>
