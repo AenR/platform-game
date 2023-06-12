@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
     public Image healthBar;
     public float healthAmount = 100f;
+    public GameObject deadMenu;
 
     // Update is called once per frame
     void Update()
     {
         if (healthAmount <= 0)
         {
-            //character dead
+            Time.timeScale = 0;
+            deadMenu.SetActive(true);
         }
         healthText.text = healthAmount.ToString();
     }
